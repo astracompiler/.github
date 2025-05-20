@@ -1,4 +1,4 @@
-<p align=center><img src="https://raw.githubusercontent.com/astracompiler/cli/main/astra.png" width="100"/></p>
+<p align=center><img src="astra.png" width="100"/></p>
 <h1 align=center>Astra</h1>
 <p align=center>🚀 Fast, reliable and easy-to-use js-to-exe compiler.</p>
 <p align=center><a href="https://astra-js.netlify.app">Docs</a> | <a href="https://npmjs.com/package/astra-cli">npm</a> | <a href="https://github.com/astracompiler/cli">GitHub</a></p>
@@ -15,16 +15,19 @@ Astra is (probably) the best compiler available on npm.
 
 Average exe is ~70-80MB (depends on your code) so it's lighter than most compilers
 
+Using [upx](https://github.com/upx/upx) you can go down up to ~30MB
+
 It's aiming to compile servers (express, fastify) or CLIs (commander) so it's not replacement of electron. 
 
 For now it only compiles windows applications. (working on macOS and linux)
 ### Features
-- **Delightful DX** - With [signale](https://npmjs.com/package/signale), [inquirer](https://www.npmjs.com/package/@inquirer/prompts) and [chalk](https://npmjs.com/package/chalk), Astra provides a great developer experience.
+- **Different than the others** - Astra is a new approach to compiling JavaScript/TypeScript applications. It uses a different method than other compilers like pkg or nexe. 
+- **Compile newest versions of Node.js** - Astra supports the latest Node.js versions.
 - **Fast build time** - Powered by [esbuild](https://npmjs.com/package/esbuild), Astra ensures the fastest possible compilation speed.
 - **Improved support for ECMAScript** - Astra supports compiling ESM-based applications, with workarounds for limitations in Node.js SEA.
+- **Delightful DX** - With [signale](https://npmjs.com/package/signale), [inquirer](https://www.npmjs.com/package/@inquirer/prompts) and [chalk](https://npmjs.com/package/chalk), Astra provides a great developer experience.
 - **Standalone Executable** - Generates a single `.exe` or binary file that includes all dependencies.
 - **Make exe your own** - Modify metadata (icon, name, version, etc.) of the generated executable.
-- **Built-in Compression** - Reduces the size of the final executable.
 
 ## Contributing
 🤝 I welcome pull requests! Every contribution will be reviewed and appreciated - even small fixes.
