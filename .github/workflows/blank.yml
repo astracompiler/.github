@@ -1,0 +1,30 @@
+name: Sync README from another repo
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+
+      - name: Clone source repo
+        run: |
+          git clone https://github.com/user/source-repo temp-source
+
+      - name: Copy README.md
+        run: |
+          cp temp-source/README.md ./README.md
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet && echo "No changes" || git commit -m "Sync README from source-repo"
+          git push
