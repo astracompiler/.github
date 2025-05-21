@@ -15,7 +15,7 @@ jobs:
 
       - name: Clone source repo
         run: |
-          git clone https://github.com/user/source-repo temp-source
+          git clone https://github.com/astracompiler/cli temp-source
 
       - name: Copy README.md
         run: |
