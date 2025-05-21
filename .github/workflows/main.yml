@@ -22,7 +22,7 @@ jobs:
 
       - name: Copy README.md
         run: |
-          cp temp-source/README.md ./README.md
+          cp temp-source/README.md ./profile/README.md
 
       - name: Commit & push if changed
         run: |
